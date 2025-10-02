@@ -58,11 +58,9 @@ export default function Home() {
 
     try {
       setIsLoading(true);
-      const { data } = await axios.get(
-        "/file" /*formDataValidated, {
+      const { data } = await axios.post("/file", formDataValidated, {
         headers: { "Content-Type": "multipart/form-data" },
-     }*/
-      );
+      });
 
       setData(JSON.parse(data));
       setIsLoading(false);
