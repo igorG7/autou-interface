@@ -1,0 +1,35 @@
+@use "../../colors.scss" as *;
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  background-color: $BACKGROUND_GRAY;
+  margin: 16px auto 0;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid $BORDER_GRAY;
+  span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 16px;
+  }
+  .circle {
+    width: 30px;
+    height: 30px;
+    border: 5px solid $ELEMENTS;
+    border-top: 5px solid transparent;
+    border-radius: 50px;
+    animation: loading 1s ease-in-out infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
