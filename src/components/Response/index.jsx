@@ -14,6 +14,9 @@ export default function Response({ hasBool, data }) {
               <strong>Remetente:</strong> {data?.sender ?? ""}
             </p>
             <p>
+              <strong>Categoria:</strong> {data?.category ?? ""}
+            </p>
+            <p>
               <strong>Assunto:</strong> {data?.subject ?? ""}
             </p>
             <p>
